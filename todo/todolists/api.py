@@ -1,13 +1,12 @@
 from rest_framework import viewsets, permissions
 
-from .models import TodoList
-from .serializers import TodoListSerializer
+from .models import TodoItem
+from .serializers import TodoItemSerializer
 
 
-# TodoList ViewSet
-class TodoListViewSet(viewsets.ModelViewSet):
-    queryset = TodoList.objects.all()
+class TodoItemViewSet(viewsets.ModelViewSet):
+    queryset = TodoItem.objects.all()
     permission_classes = [
         permissions.AllowAny
     ]
-    serializer_class = TodoListSerializer
+    serializer_class = TodoItemSerializer

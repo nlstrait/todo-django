@@ -1,7 +1,7 @@
 from rest_framework import routers
-from .api import TodoListViewSet
+from .api import TodoItemViewSet
 
 router = routers.DefaultRouter()
-router.register('api/lists', TodoListViewSet, 'lists')
+router.register('api/items', TodoItemViewSet, 'items')
 
 urlpatterns = router.urls
